@@ -69,6 +69,8 @@
     }
   }
   .aside-menu{
+    margin-bottom: 25px;
+
     ul{
       li{
         color: $darkGrey;
@@ -93,6 +95,41 @@
             @extend %activeLink;
           }
         }
+      }
+    }
+  }
+  .your-manager{
+    padding: 26px 18px;
+    border-top: solid 2px $black;
+
+    img{
+      height: 43px;
+      width: 43px;
+      border-radius: 50%;
+    }
+    
+    .title{
+      font-weight: $fontMedium;
+      font-size: $fontSize;
+      color: #808080;
+    }
+
+    .manager-profile{
+      margin-top: 18px;
+
+      a{
+        margin-left: 10px;
+        color: $blue;
+        line-height: 43px;
+      }
+
+      .indicator{
+        position: absolute;
+        height: 11px;
+        width: 11px;
+        background-color: $green;
+        border-radius: 50%;
+        left: 50px;
       }
     }
   }

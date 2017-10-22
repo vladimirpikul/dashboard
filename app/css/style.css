@@ -281,6 +281,10 @@ button {
   margin-top: 5px;
 }
 
+#aside .aside-menu {
+  margin-bottom: 25px;
+}
+
 #aside .aside-menu ul li {
   color: #979797;
 }
@@ -294,6 +298,44 @@ button {
 #aside .aside-menu ul li a [class*='icon-'] {
   font-size: 17px;
   margin-right: 15px;
+}
+
+#aside .your-manager {
+  padding: 26px 18px;
+  border-top: solid 2px #333;
+}
+
+#aside .your-manager img {
+  height: 43px;
+  width: 43px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+#aside .your-manager .title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #808080;
+}
+
+#aside .your-manager .manager-profile {
+  margin-top: 18px;
+}
+
+#aside .your-manager .manager-profile a {
+  margin-left: 10px;
+  color: #56819f;
+  line-height: 43px;
+}
+
+#aside .your-manager .manager-profile .indicator {
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  background-color: #04ae00;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  left: 50px;
 }
 
 .content-wrapper {
