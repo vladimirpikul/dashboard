@@ -232,7 +232,11 @@ button {
   background-color: #fff;
 }
 
-#header .user-control {
+#header .user-control,
+#header .user-notification,
+#header .user-name,
+#header .icon-quit {
+  position: relative;
   padding: 18px;
   border-left: 1px solid #e3e3e3;
   font-weight: 400;
@@ -240,12 +244,52 @@ button {
   color: #979797;
 }
 
-#header .user-control span {
+#header .user-control .account,
+#header .user-notification .account,
+#header .user-name .account,
+#header .icon-quit .account {
   margin: 0 20px 0 15px;
 }
 
-#header .user-control .icon-arrow-down {
+#header .user-control i,
+#header .user-notification i,
+#header .user-name i,
+#header .icon-quit i {
+  vertical-align: middle;
+}
+
+#header .user-control .indicator,
+#header .user-notification .indicator,
+#header .user-name .indicator,
+#header .icon-quit .indicator {
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  background-color: #04ae00;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  left: 30px;
+  bottom: 37px;
+}
+
+#header .user-control .icon-arrow-down,
+#header .user-notification .icon-arrow-down,
+#header .user-name .icon-arrow-down,
+#header .icon-quit .icon-arrow-down {
   font-size: 12px;
+}
+
+#header .user-control .user-id,
+#header .user-notification .user-id,
+#header .user-name .user-id,
+#header .icon-quit .user-id {
+  margin-left: 10px;
+}
+
+#header .user-name span {
+  font-size: 13px;
+  font-weight: 300;
+  color: #56819f;
 }
 
 #aside .aside-menu ul li.active a, #aside .aside-menu ul li a:hover {
@@ -298,6 +342,10 @@ button {
 #aside .aside-menu ul li a [class*='icon-'] {
   font-size: 17px;
   margin-right: 15px;
+}
+
+#aside .aside-menu ul li a i {
+  vertical-align: middle;
 }
 
 #aside .your-manager {

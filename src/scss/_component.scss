@@ -19,19 +19,49 @@
   border-bottom: 1px solid $lightGrey;
   background-color: $headerBg;
 
-  .user-control{
+  .user-control,
+  .user-notification,
+  .user-name,
+  .icon-quit{
+    position: relative;
     padding: 18px;
     border-left: 1px solid $lightGrey;
     font-weight: $fontRegular;
     font-size: 20px;
     color: $darkGrey;
 
-    span{
+    .account{
       margin: 0 20px 0 15px;
+    }
+
+    i{
+      vertical-align: middle;
+    }
+
+    .indicator{
+      position: absolute;
+      height: 11px;
+      width: 11px;
+      background-color: $green;
+      border-radius: 50%;
+      left: 30px;
+      bottom: 37px;
     }
 
     .icon-arrow-down{
       font-size: 12px;
+    }
+
+    .user-id{
+      margin-left: 10px;
+    }
+  }
+
+  .user-name{
+    span{
+      font-size: 13px;
+      font-weight: $fontLight;
+      color: $blue;
     }
   }
 }
@@ -93,6 +123,10 @@
 
           &:hover{
             @extend %activeLink;
+          }
+
+          i{
+            vertical-align: middle;
           }
         }
       }
