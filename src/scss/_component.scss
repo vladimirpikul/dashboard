@@ -56,41 +56,19 @@
   border-bottom: 1px solid $lightGrey;
   background-color: $headerBg;
 
-  .user-control,
-  .user-notification,
-  .user-name,
-  .icon-quit{
+  .user-control{
     position: relative;
-    padding: 18px;
-    border-left: 1px solid $lightGrey;
-    font-weight: $fontRegular;
-    font-size: 20px;
-    color: $darkGrey;
 
     .account{
-      margin: 0 20px 0 15px;
+      margin: 0 15px 0 10px;
     }
 
     i{
       vertical-align: middle;
     }
 
-    .indicator{
-      position: absolute;
-      height: 11px;
-      width: 11px;
-      background-color: $green;
-      border-radius: 50%;
-      left: 30px;
-      bottom: 37px;
-    }
-
     .icon-arrow-down{
       font-size: 12px;
-    }
-
-    .user-id{
-      margin-left: 10px;
     }
 
     &.open{
@@ -104,11 +82,29 @@
     }
   }
 
+  .user-notification{
+    position: relative;
+
+    .indicator{
+      position: absolute;
+      height: 9px;
+      width: 9px;
+      background-color: $orange;
+      border-radius: 50%;
+      left: 30px;
+      bottom: 37px;
+    }
+  }
+
   .user-name{
     span{
       font-size: 13px;
       font-weight: $fontLight;
       color: $blue;
+    }
+
+    .user-id{
+      margin-left: 10px;
     }
   }
 }

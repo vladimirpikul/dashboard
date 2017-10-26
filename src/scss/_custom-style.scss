@@ -1,3 +1,11 @@
+// header
+.header-section {
+  font-size: 20px;
+  padding: 18px;
+  border-left: 1px solid $lightGrey;
+  color: $darkGrey;
+  font-weight: $fontRegular;
+}
 // main
 #main{
   padding-left: $asideWidth;
