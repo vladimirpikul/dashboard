@@ -10,7 +10,44 @@
 }
 .section-title{
   @extend %title;
+}
 
+// container
+.container{
+  margin: 0 auto;
+
+  &.sm{
+    max-width: 684px;
+  }
+}
+
+// btn
+.btn{
+  padding: 10px 20px;
+  border: none;
+  font-weight: $fontLight;
+  font-size: 18px;
+  border-radius: 2px;
+}
+.btn.btn-default {
+  background-color: $darkGrey;
+  color: #fff;
+
+  &:hover{
+    background-color: $grey;
+  }
+}
+.btn.btn-action {
+  background-color: $orange;
+  color: #fff;
+
+  &:hover{
+    background-color: $orangeLight;
+  }
+}
+.btn.btn-disable {
+  background-color: $lightGrey;
+  color: #fff;
 }
 
 // header
@@ -54,6 +91,16 @@
 
     .user-id{
       margin-left: 10px;
+    }
+
+    &.open{
+      background-color: $xsLightGrey;
+
+      .icon-arrow-down{
+        display: inline-block;
+        transform: rotate(180deg);
+        line-height: 0;
+      }
     }
   }
 
@@ -184,5 +231,86 @@
   .card-header{
     border-bottom: 1px solid $lightGrey;
     padding: 18px;
+  }
+
+  .card-date{
+    padding: 30px 0;
+    border-bottom: 1px solid $lightGrey;
+  }
+}
+
+.datepicker-form{
+
+  .date-input-wrap{
+    display: inline-block;
+    border: 1px solid $lightGrey;
+    border-radius: 3px;
+    color: $black;
+    padding: 5px 0;
+    vertical-align: middle;
+    margin-right: 12px;
+
+    input{
+      padding: 11px 16px;
+      vertical-align: middle;
+      display: inline-block;
+
+      &#to{
+        border-left: 1px solid $lightGrey;
+      }
+    }
+
+    label{
+      padding: 0 14px 0 10px;
+    }
+  }
+
+  .btn{
+    vertical-align: middle;
+  }
+}
+
+// dropdown
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  background-color: $xsLightGrey;
+  padding: 10px 18px 24px;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+// table
+.table{
+  font-size: $tableFontSize;
+  border-collapse: collapse;
+
+  tbody{
+    tr{
+      transition: all .2s linear;
+
+      &:hover{
+        background-color: $tableTrHover;
+
+        .hide-icons{
+          opacity: 1;
+        }
+      }
+      &:last-child{
+        border-bottom: 1px solid $lightGrey;
+      }
+    }
+  }
+
+  td{
+    padding: 18px;
+    border-top: 1px solid $lightGrey;
+
+    .hide-icons{
+      opacity: 0;
+      transition: all .2s linear;
+    }
   }
 }
