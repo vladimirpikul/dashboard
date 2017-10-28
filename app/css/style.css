@@ -312,6 +312,10 @@ button {
   background-color: #f5f5f5;
 }
 
+#header .user-control.open .account {
+  color: #333;
+}
+
 #header .user-control.open .icon-arrow-down {
   display: inline-block;
   -webkit-transform: rotate(180deg);
@@ -499,6 +503,30 @@ button {
   top: 100%;
   left: 0;
   right: 0;
+  font-size: 12px;
+}
+
+.dropdown-menu li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dropdown-menu li + li {
+  margin-top: 15px;
+}
+
+.dropdown-menu li span {
+  color: #333;
+}
+
+.links .btn-row {
+  padding: 20px 0;
 }
 
 .table {
@@ -534,6 +562,14 @@ button {
   -webkit-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear;
+}
+
+.table td:first-child {
+  width: 300px;
+}
+
+.table td:last-child {
+  text-align: right;
 }
 
 .header-section {

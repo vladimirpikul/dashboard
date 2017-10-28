@@ -74,6 +74,10 @@
     &.open{
       background-color: $xsLightGrey;
 
+      .account{
+        color: $black;
+      }
+
       .icon-arrow-down{
         display: inline-block;
         transform: rotate(180deg);
@@ -267,8 +271,7 @@
 }
 
 // dropdown
-
-.dropdown-menu{
+.dropdown-menu {
   display: none;
   position: absolute;
   background-color: $xsLightGrey;
@@ -276,6 +279,27 @@
   top: 100%;
   left: 0;
   right: 0;
+  font-size: 12px;
+
+  li {
+    & + li {
+      margin-top: 15px;
+    }
+
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: $black;
+    }
+  }
+}
+
+// links
+.links{
+  .btn-row {
+    padding: 20px 0;
+  }
 }
 
 // table
@@ -294,6 +318,7 @@
           opacity: 1;
         }
       }
+
       &:last-child{
         border-bottom: 1px solid $lightGrey;
       }
@@ -308,5 +333,14 @@
       opacity: 0;
       transition: all .2s linear;
     }
+
+    &:first-child{
+      width: 300px;
+    }
+
+    &:last-child{
+      text-align: right;
+    }
   }
 }
+
