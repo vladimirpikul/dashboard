@@ -286,6 +286,17 @@
   background-color: $cardBg;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
+  .card-body{
+    .payout-pagination{
+      text-align: center;
+    }
+
+    &.payout-card,
+    &.details-card{
+      padding: 0 20px;
+    }
+  }
+
   .card-header{
     border-bottom: 1px solid $lightGrey;
     padding: 18px;
@@ -377,48 +388,174 @@
 }
 
 // table
-.table{
+.table {
+  margin-bottom: 0;
   font-size: $tableFontSize;
   border-collapse: collapse;
 
-  tbody{
-    tr{
-      transition: all .2s linear;
-
-      &:hover{
-        background-color: $tableTrHover;
-
-        .hide-icons{
-          opacity: 1;
-        }
-      }
-
-      &:last-child{
-        border-bottom: 1px solid $lightGrey;
+  thead {
+    tr {
+      th {
+        border-bottom: 1px solid #ddd;
+        padding: 18px;
+        text-align: left;
+        font-weight: $fontBold;
+        color: $titleColor;
+        font-size: $tableFontSize;
       }
     }
   }
 
-  td{
-    padding: 18px;
-    border-top: 1px solid $lightGrey;
+  tbody {
+    tr {
+      &:hover {
+        background-color: $tableTrHover;
+      }
 
-    .hide-icons{
+      &:last-child {
+        border-bottom: 1px solid $lightGrey;
+      }
+
+      td {
+        padding: 18px;
+        border-top: 1px solid $lightGrey;
+      }
+    }
+  }
+
+  &.links-table {
+    font-size: $titleFontSize;
+    transition: all .2s linear;
+
+    tr{
+      &:hover {
+        .hide-icons {
+          opacity: 1;
+        }
+      }
+
+      td{
+        &:last-child {
+          text-align: right;
+        }
+
+        &:first-child {
+          width: 300px;
+        }
+      }
+    }
+
+    .hide-icons {
       opacity: 0;
       transition: all .2s linear;
     }
 
-    &:first-child{
-      width: 300px;
-    }
-
-    &:last-child{
-      text-align: right;
-    }
-
-    i{
-      & + i{
+    i {
+      & + i {
         margin-left: 15px;
+      }
+    }
+
+    a {
+      color: $blue;
+    }
+  }
+
+
+
+  &.payout-table,
+  &.details-table{
+    margin-top: 20px;
+
+    thead{
+      tr{
+        th{
+          padding-left: 10px;
+
+          i{
+            opacity: 0;
+            font-size: 8px;
+            margin-left: 8px;
+          }
+
+          .sort-table{
+            display: inherit;
+            padding: 5px 14px 5px 8px;
+
+            &:hover{
+              i{
+                opacity: 1;
+              }
+
+              span{
+                color: $black;
+              }
+
+              border-radius: 2px;
+              cursor: pointer;
+              background-color: $tableThHover;
+            }
+          }
+        }
+      }
+    }
+
+    tbody{
+      tr{
+        td{
+          text-align: left;
+          font-weight: $fontLight;
+          color: $black;
+        }
+
+        &:first-child{
+          td{
+            border-top: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// pagination
+.pagination{
+  padding: 25px 0 20px 0;
+
+  ul{
+    li{
+      font-size: $titleFontSize;
+
+      span{
+        vertical-align: middle;
+      }
+
+      a{
+        text-align: center;
+        line-height: 40px;
+        display: block;
+        color: $blue;
+        height: 40px;
+        width: 40px;
+
+        &:hover{
+          background-color: $paginationHover;
+          border-radius: 3px;
+          color: $titleColor;
+          font-weight: $fontBold;
+        }
+      }
+
+      &:first-child{
+        a{
+          margin-right: 20px;
+        }
+      }
+
+      &:last-child{
+        a{
+          margin-left: 20px;
+        }
       }
     }
   }
