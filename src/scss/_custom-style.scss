@@ -88,3 +88,50 @@
     }
   }
 }
+
+// btn
+.btn{
+  padding: 10px 20px;
+  border: none;
+  font-weight: $fontLight;
+  font-size: 18px;
+  border-radius: 2px;
+
+  &.btn-default {
+    background-color: $darkGrey;
+    color: #fff;
+
+    &:hover{
+      background-color: $grey;
+    }
+  }
+
+  &.btn-action {
+    background-color: $orange;
+    color: #fff;
+
+    &:hover{
+      background-color: $orangeLight;
+    }
+  }
+
+  &.btn-disable {
+    background-color: $lightGrey;
+    color: #fff;
+  }
+}
+
+// input
+input{
+  border: 1px solid $lightGrey;
+  border-radius: 2px;
+  padding: 12px;
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:focus{
+    border-color: $grey;
+  }
+}

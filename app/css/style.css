@@ -2037,38 +2037,6 @@ input[type="checkbox"]:checked + label::before {
   max-width: 684px;
 }
 
-.btn {
-  padding: 10px 20px;
-  border: none;
-  font-weight: 300;
-  font-size: 18px;
-  -webkit-border-radius: 2px;
-          border-radius: 2px;
-}
-
-.btn.btn-default {
-  background-color: #979797;
-  color: #fff;
-}
-
-.btn.btn-default:hover {
-  background-color: #bababa;
-}
-
-.btn.btn-action {
-  background-color: #f58220;
-  color: #fff;
-}
-
-.btn.btn-action:hover {
-  background-color: #ffa200;
-}
-
-.btn.btn-disable {
-  background-color: #e3e3e3;
-  color: #fff;
-}
-
 #header {
   width: 100%;
   border-bottom: 1px solid #e3e3e3;
@@ -2262,7 +2230,7 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .card .card-form .select-group {
-  padding: 18px;
+  padding: 18px 0;
 }
 
 .card .card-form .input-group label {
@@ -2271,6 +2239,66 @@ input[type="checkbox"]:checked + label::before {
 
 .card .card-form .input-group input {
   width: 100%;
+  margin-top: 15px;
+}
+
+.card .card-form .input-group input::-moz-placeholder {
+  color: #bababa;
+}
+
+.card .card-form .input-group input::-webkit-input-placeholder {
+  color: #bababa;
+}
+
+.card .card-form .input-group input:-ms-input-placeholder {
+  color: #bababa;
+}
+
+.card .card-form .input-group input::-ms-input-placeholder {
+  color: #bababa;
+}
+
+.card .card-form .input-group input::placeholder {
+  color: #bababa;
+}
+
+.card .card-form .input-group + .input-group {
+  margin-left: 20px;
+}
+
+.card .card-form .input-group .jq-selectbox {
+  margin-top: 15px;
+}
+
+.card .card-form .input-group .jq-selectbox__select {
+  height: 41px;
+  line-height: 41px;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #e3e3e3;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.card .card-form .input-group .jq-selectbox__select .jq-selectbox__trigger {
+  border-left: none;
+}
+
+.card .card-form .input-group .jq-selectbox__select .jq-selectbox__trigger .jq-selectbox__trigger-arrow {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  top: 0;
+  width: auto;
+}
+
+.card .card-form .input-group .jq-selectbox__select .jq-selectbox__trigger .jq-selectbox__trigger-arrow:before {
+  content: '\0041';
+  font-family: 'Glyphter';
+  display: inline-block;
+  font-size: 11px;
+  color: #bababa;
 }
 
 .datepicker-form .date-input-wrap {
@@ -2288,6 +2316,7 @@ input[type="checkbox"]:checked + label::before {
   padding: 11px 16px;
   vertical-align: middle;
   display: inline-block;
+  border: none;
 }
 
 .datepicker-form .date-input-wrap input#to {
@@ -2583,4 +2612,51 @@ input[type="checkbox"]:checked + label::before {
 .generate-links .btn i {
   vertical-align: sub;
   margin-right: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  font-weight: 300;
+  font-size: 18px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+}
+
+.btn.btn-default {
+  background-color: #979797;
+  color: #fff;
+}
+
+.btn.btn-default:hover {
+  background-color: #bababa;
+}
+
+.btn.btn-action {
+  background-color: #f58220;
+  color: #fff;
+}
+
+.btn.btn-action:hover {
+  background-color: #ffa200;
+}
+
+.btn.btn-disable {
+  background-color: #e3e3e3;
+  color: #fff;
+}
+
+input {
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  padding: 12px;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+input:focus {
+  border-color: #bababa;
 }

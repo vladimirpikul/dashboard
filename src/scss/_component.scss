@@ -136,35 +136,6 @@ input[type="checkbox"]{
   }
 }
 
-// btn
-.btn{
-  padding: 10px 20px;
-  border: none;
-  font-weight: $fontLight;
-  font-size: 18px;
-  border-radius: 2px;
-}
-.btn.btn-default {
-  background-color: $darkGrey;
-  color: #fff;
-
-  &:hover{
-    background-color: $grey;
-  }
-}
-.btn.btn-action {
-  background-color: $orange;
-  color: #fff;
-
-  &:hover{
-    background-color: $orangeLight;
-  }
-}
-.btn.btn-disable {
-  background-color: $lightGrey;
-  color: #fff;
-}
-
 // header
 #header{
   width: 100%;
@@ -367,7 +338,7 @@ input[type="checkbox"]{
 
   .card-form{
     .select-group{
-      padding: 18px;
+      padding: 18px 0;
     }
 
     .input-group{
@@ -377,6 +348,60 @@ input[type="checkbox"]{
 
       input{
         width: 100%;
+        margin-top: 15px;
+      }
+
+      input::-moz-placeholder{
+        color: $grey;
+      }
+      input::-webkit-input-placeholder{
+        color: $grey;
+      }
+      input:-ms-input-placeholder {
+        color: $grey;
+      }
+      input::-ms-input-placeholder {
+        color: $grey;
+      }
+      input::placeholder {
+        color: $grey;
+      }
+
+      & + .input-group{
+        margin-left: 20px;
+      }
+
+      .jq-selectbox{
+        margin-top: 15px;
+      }
+
+      .jq-selectbox__select{
+        height: 41px;
+        line-height: 41px;
+        background: none;
+        box-shadow: none;
+        border-color: $lightGrey;
+        border-radius: 2px;
+
+        .jq-selectbox__trigger{
+          border-left: none;
+
+          .jq-selectbox__trigger-arrow{
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            top: 0;
+            width: auto;
+
+            &:before{
+              content: '\0041';
+              font-family: 'Glyphter';
+              display: inline-block;
+              font-size: 11px;
+              color: $grey;
+            }
+          }
+        }
       }
     }
   }
@@ -397,6 +422,7 @@ input[type="checkbox"]{
       padding: 11px 16px;
       vertical-align: middle;
       display: inline-block;
+      border: none;
 
       &#to{
         border-left: 1px solid $lightGrey;
