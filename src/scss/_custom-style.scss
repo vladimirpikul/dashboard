@@ -11,13 +11,20 @@
   border-left: 1px solid $lightGrey;
   color: $darkGrey;
   font-weight: $fontRegular;
+
+  &:hover{
+    background-color: $tableTrHover;
+    cursor: pointer;
+  }
 }
+
 // main
 #main{
   padding-left: $asideWidth;
   padding-top: 62px;
 }
 
+// mobile sidebar
 ._mobileSidebar{
 
   #main{
@@ -69,11 +76,30 @@
       }
     }
     .your-manager{
-      display: none;
+      padding: 20px 5px;
+
+      .title, a{
+        display: none;
+      }
+
+      .manager-profile{
+        margin-top: 0;
+        justify-content: center;
+
+        img{
+          height: 38px;
+          width: 38px;
+        }
+
+        span{
+          left: 40px;
+        }
+      }
     }
   }
 }
 
+// generate links
 .generate-links{
   input[type="text"]{
     flex-grow: 1;
@@ -91,33 +117,31 @@
 
 // btn
 .btn{
-  padding: 10px 20px;
+  padding: 15px 25px;
   border: none;
   font-weight: $fontLight;
-  font-size: 18px;
-  border-radius: 2px;
+  font-size: $btnFontSize;
+  border-radius: 3px;
+  color: $btnDefaultColor;
 
   &.btn-default {
-    background-color: $darkGrey;
-    color: #fff;
+    background-color: $btnDefaultBg;
 
     &:hover{
-      background-color: $grey;
+      background-color: $btnDefaultBgHover;
     }
   }
 
   &.btn-action {
-    background-color: $orange;
-    color: #fff;
+    background-color: $btnActionBg;
 
     &:hover{
-      background-color: $orangeLight;
+      background-color: $btnActionBgHover;
     }
   }
 
   &.btn-disable {
-    background-color: $lightGrey;
-    color: #fff;
+    background-color: $btnDisableBg;
   }
 }
 

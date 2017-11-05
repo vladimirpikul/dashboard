@@ -2196,8 +2196,8 @@ input[type="checkbox"]:checked + label::before {
 
 .content-wrapper {
   padding: 18px;
-  height: -webkit-calc(100wh - 62px);
-  height: calc(100wh - 62px);
+  height: -webkit-calc(100vh - 62px);
+  height: calc(100vh - 62px);
   overflow-y: auto;
 }
 
@@ -2266,8 +2266,65 @@ input[type="checkbox"]:checked + label::before {
   margin-left: 20px;
 }
 
+.card .card-form .input-group:not(:last-child) {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.card .card-form .input-group:last-child {
+  min-width: 125px;
+}
+
 .card .card-form .input-group .jq-selectbox {
   margin-top: 15px;
+}
+
+.card .card-form .input-group .jq-selectbox li {
+  padding: 5px 50px 6px;
+  background-position-y: 5px;
+}
+
+.card .card-form .input-group .jq-selectbox li.selected {
+  color: #333;
+}
+
+.card .card-form .input-group .jq-selectbox li:hover {
+  color: #333;
+  background-color: #bababa;
+}
+
+.card .card-form .input-group .lang-en {
+  background: url(../img/lang-en.png) no-repeat 0 12px;
+  background-position-x: 15%;
+}
+
+.card .card-form .input-group .lang-ru {
+  background: url(../img/lang-ru.png) no-repeat 0 12px;
+  background-position-x: 15%;
+}
+
+.card .card-form .input-group .lang-de {
+  background: url(../img/lang-de.png) no-repeat 0 12px;
+  background-position-x: 15%;
+}
+
+.card .card-form .input-group .lang-fr {
+  background: url(../img/lang-fr.png) no-repeat 0 12px;
+  background-position-x: 15%;
+}
+
+.card .card-form .input-group #lang-styler .jq-selectbox__select {
+  padding: 0 45px 0 45px;
+}
+
+.card .card-form .input-group #compain-styler .jq-selectbox__select .jq-selectbox__select-text {
+  color: #bababa;
+}
+
+.card .card-form .input-group #compain-styler .jq-selectbox__dropdown ul li {
+  color: #bababa;
 }
 
 .card .card-form .input-group .jq-selectbox__select {
@@ -2325,10 +2382,15 @@ input[type="checkbox"]:checked + label::before {
 
 .datepicker-form .date-input-wrap label {
   padding: 0 14px 0 10px;
+  vertical-align: middle;
+  display: inline-block;
+  color: #979797;
+  line-height: 0;
 }
 
 .datepicker-form .btn {
   vertical-align: middle;
+  line-height: 0;
 }
 
 .dropdown-menu {
@@ -2537,6 +2599,11 @@ input[type="checkbox"]:checked + label::before {
   font-weight: 400;
 }
 
+.header-section:hover {
+  background-color: #f1f3f3;
+  cursor: pointer;
+}
+
 #main {
   padding-left: 188px;
   padding-top: 62px;
@@ -2595,7 +2662,28 @@ input[type="checkbox"]:checked + label::before {
 }
 
 ._mobileSidebar #aside .your-manager {
+  padding: 20px 5px;
+}
+
+._mobileSidebar #aside .your-manager .title, ._mobileSidebar #aside .your-manager a {
   display: none;
+}
+
+._mobileSidebar #aside .your-manager .manager-profile {
+  margin-top: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+._mobileSidebar #aside .your-manager .manager-profile img {
+  height: 38px;
+  width: 38px;
+}
+
+._mobileSidebar #aside .your-manager .manager-profile span {
+  left: 40px;
 }
 
 .generate-links input[type="text"] {
@@ -2615,17 +2703,17 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 15px 25px;
   border: none;
   font-weight: 300;
   font-size: 18px;
-  -webkit-border-radius: 2px;
-          border-radius: 2px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  color: #fff;
 }
 
 .btn.btn-default {
   background-color: #979797;
-  color: #fff;
 }
 
 .btn.btn-default:hover {
@@ -2634,7 +2722,6 @@ input[type="checkbox"]:checked + label::before {
 
 .btn.btn-action {
   background-color: #f58220;
-  color: #fff;
 }
 
 .btn.btn-action:hover {
@@ -2643,7 +2730,6 @@ input[type="checkbox"]:checked + label::before {
 
 .btn.btn-disable {
   background-color: #e3e3e3;
-  color: #fff;
 }
 
 input {

@@ -1,4 +1,4 @@
-// Font
+// font
 $fontFamily: 'Roboto', sans-serif;
 $fontLight: 300;
 $fontRegular: 400;
@@ -7,7 +7,7 @@ $fontBold: 700;
 $lineHeight: 1;
 $fontSize: 14px;
 
-// Color
+// color
 $black: #333;
 $darkGrey: #979797;
 $grey: #bababa;
@@ -32,6 +32,15 @@ $asideWidth: 188px;
 $activeLinkBg: #282828;
 $activeLinkColor: #fff;
 $asideMobileWidth: 60px;
+
+// btn
+$btnFontSize: 18px;
+$btnDefaultColor: #fff;
+$btnDefaultBg: $darkGrey;
+$btnDefaultBgHover: $grey;
+$btnActionBg: $orange;
+$btnActionBgHover: $orangeLight;
+$btnDisableBg: $lightGrey;
 
 // card
 $cardBg: #fff;

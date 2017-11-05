@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Template</title>
+
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+    <!-- jQuery UI style-->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -251,7 +255,7 @@
                         </div>
                         <div class="input-group align-self-end">
                             <select name="" id="compain">
-                                <option disabled>gtgtgtgt</option>
+                                <option value="">Select compain</option>
                                 <option value="">one</option>
                                 <option value="">two</option>
                             </select>
@@ -259,8 +263,10 @@
                         <div class="input-group">
                             <label for="" class="section-title">Language</label>
                             <select name="" id="lang">
-                                <option value="">USA</option>
-                                <option value="">RU</option>
+                                <option class="lang-en">USA</option>
+                                <option class="lang-ru">RU</option>
+                                <option class="lang-de">DE</option>
+                                <option class="lang-fr">FR</option>
                             </select>
                         </div>
                     </div>
@@ -392,6 +398,8 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 <script src="js/jquery.bpopup.min.js"></script>
+
+<!-- Init plugins -->
 <script src="js/init.js"></script>
 <script src="js/plugins.min.js"></script>
 <script src="js/jquery.formstyler.min.js"></script>
